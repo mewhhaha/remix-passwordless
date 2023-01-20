@@ -4,7 +4,7 @@ import { Link, useLoaderData } from "@remix-run/react";
 import { Button } from "~/components/Button";
 
 export async function loader({ request, context }: LoaderArgs) {
-  const user = await cookieSession(request, context);
+  const { user } = await cookieSession(request, context);
 
   return user;
 }
