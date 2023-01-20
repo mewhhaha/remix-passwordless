@@ -14,18 +14,18 @@ export default function Index() {
   return (
     <>
       {user ? (
+        <div className="flex flex-col">
+          <Button as={Link} to="logout">
+            Logout
+          </Button>
+        </div>
+      ) : (
         <div className="flex flex-col gap-4">
           <Button as={Link} to="/login">
             Login
           </Button>
           <Button as={Link} to="/sign-up" className="bg-orange-400 text-white">
             Sign up
-          </Button>
-        </div>
-      ) : (
-        <div className="flex flex-col">
-          <Button as={Link} to="logout">
-            Logout
           </Button>
         </div>
       )}
