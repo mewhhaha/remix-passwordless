@@ -104,6 +104,9 @@ export default function SignUp() {
         />
       </div>
 
+      <div className="text-red-500">
+        {actionData?.success === false && actionData.message}
+      </div>
       <Button className="bg-orange-400 text-white">Sign up</Button>
     </Form>
   );

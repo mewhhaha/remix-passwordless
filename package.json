@@ -8,7 +8,8 @@
     "dev": "remix build && run-p \"dev:*\"",
     "start": "cross-env NODE_ENV=production npm run wrangler",
     "typecheck": "tsc",
-    "wrangler": "wrangler pages dev ./public --compatibility-date=2023-01-20"
+    "wrangler": "wrangler pages dev ./public --compatibility-date=2023-01-20",
+    "upload": "wrangler pages publish ./public --project-name remix-passwordless"
   },
   "dependencies": {
     "@remix-run/cloudflare": "^1.11.0",
